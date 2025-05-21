@@ -8,9 +8,17 @@ class tallyStore {
 
     dispatch(action) {
         switch (action.type){
-            case 'ADD':
+            case 'ADD' :
                 this.tally.count += 1;
                 break;
-            case ''
+            case 'SUBTRACT' :
+                this.tally.count -= 1;
+                break;
+            case 'RESET' :
+                this.tally.count = 0;
+                break;
+                default:
+                throw new Error('Invalid Action');
         }
+        
     }
