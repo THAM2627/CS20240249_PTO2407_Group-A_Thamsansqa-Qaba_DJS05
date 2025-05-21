@@ -20,5 +20,14 @@ class tallyStore {
                 default:
                 throw new Error('Invalid Action');
         }
-        
+        this.notify();
     }
+    subscribe(callback) {
+        this.subscribers.push(callback);
+    }
+    notify() {
+        this.subscribers.forEach(callback => callback());
+    }
+}
+
+export default tallyStore
