@@ -7,6 +7,10 @@ class tallyStore {
     }
 
     dispatch(action) {
-        
+        switch (action.type){
+            case 'ADD':
+                this.tally.count += 1;
+                break;
+            case ''
+        }
     }
-}
