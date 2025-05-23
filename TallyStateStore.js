@@ -31,8 +31,8 @@ class TallyStore {
         this.subscribers.push(callback);
     }
     notify() {
-        this.subscribers.forEach(callback => callback(this.getState));
+        this.subscribers.forEach(callback => callback(this.getState()));
     }
 }
 
-export default tallyStore
+export default TallyStore
