@@ -1,4 +1,4 @@
-import TallyStore from "./TallyStateStore";
+import TallyStore from "./TallyStateStore.js";
 
 const store = new TallyStore();
 
