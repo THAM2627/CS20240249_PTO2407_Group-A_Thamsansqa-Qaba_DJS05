@@ -1,4 +1,4 @@
-class tallyStore {
+class TallyStore {
     constructor() {
         this.tally = {count: 0};
         this.subscribers =  [];
@@ -21,7 +21,7 @@ class tallyStore {
             case 'RESET' :
                 this.tally.count = 0;
                 break;
-                
+
                 default:
                 throw new Error('Invalid Action');
         }
@@ -31,7 +31,7 @@ class tallyStore {
         this.subscribers.push(callback);
     }
     notify() {
-        this.subscribers.forEach(callback => callback());
+        this.subscribers.forEach(callback => callback(this.getState));
     }
 }
 
