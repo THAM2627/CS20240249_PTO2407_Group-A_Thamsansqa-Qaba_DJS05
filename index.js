@@ -1,17 +1,17 @@
-import tallyStore from "./Tally State Store";
+import TallyStore from "./TallyStateStore";
 
-const store = new tallyStore();
+const store = new TallyStore();
 
-tallyStore.subscribe((state) => console.log(state));
+store.subscribe((state) => console.log('New state:', state));
 
 console.log('Dispatching ADD action...');
-tallyStore.dispatch({ type: 'ADD'});
+store.dispatch({ type: 'ADD'});
 
 console.log('Dispatching ADD action one more time...');
-tallyStore.dispatch({ type: 'ADD'});
+store.dispatch({ type: 'ADD'});
 
 console.log('Dispatching SUBTRACT action...');
-tallyStore.dispatch({ type: 'SUBTRACT'});
+store.dispatch({ type: 'SUBTRACT'});
 
 console.log('Dispatching RESET action...');
-tallyStore.dispatch({ type: 'RESET'});
+store.dispatch({ type: 'RESET'});
