@@ -1,6 +1,6 @@
 class tallyStore {
     constructor() {
-        this.tally = 0;
+        this.tally = {count: 0};
         this.subscribers =  [];
         console.log ('Store intialized:', this.tally)
     }
